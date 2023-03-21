@@ -1,0 +1,26 @@
+import math
+S = int(input('Enter sum of 2 numbers '))
+P = int(input('Enter product of 2 numbers '))
+D = S*S - 4*P
+if D == 0:
+    x= S/2
+    y = S - x 
+    if x.is_integer() and y.is_integer and (ranx := 0 < x <= 1000) and (rany := 0 < y <= 1000) :
+        print(f'x = {x}; y = {y}')
+    else:
+        print('There is no int roots in your range ')
+elif D > 0:
+    x1 = (S + math.sqrt(D))/2
+    x2 = (S - math.sqrt(D))/2
+    y1 = S - x1
+    y2 = S - x2
+    if x1.is_integer() and y1.is_integer and (ranx := x1 <= 1000) and (rany := y1 <= 1000) :
+        print(f'x1 = {x1}; y1 = {y1}')
+    else:
+        print('There is no int root in your range')
+    if x2.is_integer() and y2.is_integer and (ranx := x2 <= 1000) and (rany := y2 <= 1000) :
+        print(f'x2={x2}; y2 = {y2}')
+    else:
+        print('There is no such int roots in your range ')
+else:
+    print('There is no roots')

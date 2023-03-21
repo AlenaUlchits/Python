@@ -1,0 +1,19 @@
+import random
+def coinsValidation(text):
+    while((num:= input(text)).isdigit() == False):
+        print('It\'s not a number, try again ')
+    return int(num)
+
+coinsQuantity = coinsValidation("Enter quantity of coins")
+coinsPos = [random.randint(0,1) for num in range(coinsQuantity)]
+blazon = sum(coinsPos)
+tail = coinsQuantity - blazon
+print(coinsPos)
+if blazon > tail :
+    toFlip = tail
+else: 
+    toFlip = blazon
+if toFlip > 0:
+    print(f'You need to flip {toFlip} coins')
+else:
+    print('You don\'t need to flip anything')

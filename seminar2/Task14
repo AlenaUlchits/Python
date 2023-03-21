@@ -1,0 +1,6 @@
+import math
+n = int(input('Enter a limit '))
+power = 0
+while(num := math.pow(2, power)) <= n:
+    print(f'2^{power} = {int(num)}')
+    power += 1
